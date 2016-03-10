@@ -3,3 +3,11 @@
 <p>Type: {{rental.type}}</p>
 <p>Location: {{rental.city}}</p>
 <p>Number of bedrooms: {{rental.bedrooms}}</p>
+{{#if isImageShowing}}
+	<p>
+		<img src={{rental.image}} alt={{rental.type}} width="500">
+		<button {{action "imageHide"}}> Hide Image</button>
+	</p>
+{{else}}
+	<button {{action "imageShow"}}>Show Image</button>
+{{/if}}
